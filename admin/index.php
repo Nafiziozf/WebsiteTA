@@ -13,6 +13,7 @@
     <nav>
       <ul>
         <li><a href="#home">Home</a></li>
+        <li><a href="#budaya">Budaya</a></li>
         <li><a href="#negara">Negara</a></li>
         <li><a href="#makanan">Makanan</a></li>
         <li><a href="#minuman">Minuman</a></li>
@@ -30,6 +31,14 @@
     <h1>Belgia</h1>
   </section>
 
+  <section id="budaya" class="section-content">
+    <h2>Budaya</h2>
+    <p>Budaya Belgia sangat beragam dan dipengaruhi oleh berbagai faktor, termasuk sejarah, geografi, dan komunitas yang berbeda. 
+      Negara ini memiliki dua bahasa resmi, yaitu Belanda dan Prancis, serta komunitas berbahasa Jerman. 
+      Budaya Belgia juga terkenal dengan seni, musik, dan festival yang meriah.</p>
+      <img src="../gambar/budayabelgia.jpg" alt="budaya" />
+  </section>
+
   <section id="negara" class="section-content">
     <h2>Negara</h2>
     <p>Belgia adalah negara yang terletak di Eropa Barat. Negara ini dikenal dengan budaya yang kaya, arsitektur yang indah, dan makanan yang lezat. 
@@ -37,12 +46,10 @@
       <img src="../gambar/belgia.jpeg" alt="belgia" />
   </section>
 
-  <section id="makanan" class="section-content">
-    <h2>Makanan</h2>
-    <p>Beberapa makanan khas Belgia yang terkenal antara lain:</p>
-    <ul>
-      <li>Frites (Kentang Goreng)</li>
-    </ul>
+   <section id="makanan" class="section-content">
+     <h2>Makanan</h2>
+      <p>Beberapa makanan khas Belgia yang terkenal antara lain:</p>
+      <p>Frites (Kentang Goreng)</p>
     <div class="image">
       <img src="../gambar/kentang.jpeg" alt="kentang" />
     </div>
