@@ -34,6 +34,7 @@
     <h2>Negara</h2>
     <p>Belgia adalah negara yang terletak di Eropa Barat. Negara ini dikenal dengan budaya yang kaya, arsitektur yang indah, dan makanan yang lezat. 
       Belgia terkenal dengan cokelatnya yang berkualitas tinggi, bir yang bervariasi, dan wafel yang terkenal di seluruh dunia.</p>
+      <img src="../gambar/belgia.jpeg" alt="belgia" />
   </section>
 
   <section id="makanan" class="section-content">
