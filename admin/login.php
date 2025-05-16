@@ -2,7 +2,7 @@
   <form action="login_proses.php" method="post">
     <table>
       <tr>
-        <td>USER NAME</td>
+        <td>USERNAME</td>
         <td>:</td>
         <td><input type="text" maxlength="10" name="username"></td>
       </tr>
