@@ -1,0 +1,196 @@
+/* RESET */
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+html, body {
+  font-family: 'Arial', sans-serif;
+  scroll-behavior: smooth;
+  background-color: #f9f9f9;
+  color: #333;
+  line-height: 1.6;
+}
+
+.top-header {
+  background-color: #002244;
+  position: sticky;
+  top: 0;
+  z-index: 1000;
+  box-shadow: 0 4px 10px rgba(0, 0, 0, 0.3);
+}
+
+nav ul {
+  display: flex;
+  justify-content: center;
+  list-style: none;
+  padding: 20px 0;
+}
+
+nav ul li {
+  margin: 0 20px;
+}
+
+nav ul li a {
+  color: #fff;
+  text-decoration: none;
+  font-weight: bold;
+  transition: color 0.3s;
+}
+
+nav ul li a:hover {
+  color: #07070700;
+}
+
+.middle {
+  background-image: url('../gambar/fotobelgia.jpg');
+  background-size: cover;
+  background-position: center;
+  height: 70vh;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  color: #fff;
+  font-size: 2rem;
+  text-align: center;
+  padding: 20px;
+}
+
+.section-content {
+  padding: 80px 20px;
+  max-width: 1000px;
+  margin: auto;
+  text-align: center;
+}
+
+.section-content h2 {
+  font-size: 2rem;
+  color: #002244;
+  margin-bottom: 20px;
+}
+
+.section-content p, .section-content ul {
+  font-size: 1.5rem;
+  color: #444;
+}
+
+.section-content img {
+  margin-top: 20px;
+  width: 300px;
+  max-width: 100%;
+  border-radius: 10px;
+  box-shadow: 0 4px 10px rgba(0,0,0,0.1);
+}
+
+#projects {
+  padding: 80px 20px;
+  background-color: #fff;
+  max-width: 1100px;
+  margin: auto;
+}
+
+#projects h2 {
+  text-align: center;
+  font-size: 2.5rem;
+  margin-bottom: 60px;
+  color: #002244;
+}
+
+.project {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  background: linear-gradient(to right, #fff, #fef7f2);
+  padding: 40px;
+  border-radius: 12px;
+  box-shadow: 0 0 20px rgba(0, 0, 0, 0.1);
+  margin-bottom: 60px;
+  flex-wrap: wrap;
+}
+
+.project.reverse {
+  flex-direction: row-reverse;
+  background: linear-gradient(to left, #fff, #fef7f2);
+}
+
+.project-text {
+  flex: 1;
+  padding: 20px;
+}
+
+
+.project p {
+  font-size: 1rem;
+  margin-bottom: 20px;
+  color: #333;
+}
+
+.project a {
+  background: #003366;
+  color: #fff;
+  padding: 10px 20px;
+  border-radius: 6px;
+  text-decoration: none;
+  font-weight: bold;
+  display: inline-block;
+}
+
+.project a:hover {
+  background: #0055aa;
+}
+
+/* halaman game*/
+.project p {
+  font-size: 1rem;
+  margin-bottom: 25px;
+  color: #444;
+}
+
+.project-images {
+  display: flex;
+  gap: 20px;
+  flex-wrap: wrap;
+  justify-content: center;
+}
+
+.project-images img {
+  width: 280px;
+  max-width: 100%;
+  border-radius: 10px;
+  box-shadow: 0 4px 15px rgba(0,0,0,0.15);
+  object-fit: cover;
+  transition: transform 0.3s ease;
+  cursor: pointer;
+}
+/* */
+.logout-button input[type="button"] {
+    background-color: #131313;
+    color: white;
+    border: none;
+    padding: 10px 20px;
+    border-radius: 25px;
+    cursor: pointer;
+    font-size: 16px;
+    box-shadow: 0 4px 6px rgba(0, 0, 0, 0.2);
+    transition: background-color 0.3s, transform 0.2s;
+    
+}
+
+.logout-button input[type="button"]:hover {
+    background-color: #000000;
+    transform: scale(1.05);
+}
+
+.logout-button input[type="button"]:active {
+    background-color: #000000;
+    transform: scale(0.95);
+}
+
+footer {
+  text-align: center;
+  padding: 20px;
+  background: #002244;
+  color: #fff;
+  font-size: 0.9rem;
+}

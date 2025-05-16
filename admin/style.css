@@ -1,0 +1,22 @@
+body {
+    background-image: url('../gambar/fotobelgia.jpg');
+    background-size: cover;
+    background-position: center;
+    background-repeat: no-repeat;
+    height: 70vh;
+    color: #d9ff00;
+    padding: 20px;
+}
+
+
+
+#footer {
+    width: 98%;
+    height: 20px;
+    background-color: #474747;
+    border: 3px solid #000000;
+    text-align: center;
+    font-size: 15px;
+    padding: 10px 10px 10px 10px;
+    clear: both;
+}
