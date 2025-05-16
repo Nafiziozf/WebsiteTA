@@ -17,7 +17,7 @@
   </header>
 
   <section id="projects">
-    <h2>BOARD GAME </h2>
+    <h2>CARD GAME </h2>
     <br></br>
     <div class="project">
       <h3>Board Game</h3>

@@ -5,7 +5,7 @@
   <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
   <link rel="icon" type="image/png" href="img/logo.png" />
   <link rel="stylesheet" href="cssindex.css" />
-  <title>Website Makanan</title>
+  <title>Website Negara</title>
 </head>
 <body>
 
@@ -13,8 +13,8 @@
     <nav>
       <ul>
         <li><a href="#home">Home</a></li>
-        <li><a href="#budaya">Budaya</a></li>
         <li><a href="#negara">Negara</a></li>
+        <li><a href="#budaya">Budaya</a></li>
         <li><a href="#makanan">Makanan</a></li>
         <li><a href="#minuman">Minuman</a></li>
         <li><a href="#baju">Baju</a></li>
@@ -31,37 +31,56 @@
     <h1>Belgia</h1>
   </section>
 
-  <section id="budaya" class="section-content">
-    <h2>Budaya</h2>
-    <p>Budaya Belgia sangat beragam dan dipengaruhi oleh berbagai faktor, termasuk sejarah, geografi, dan komunitas yang berbeda. 
-      Negara ini memiliki dua bahasa resmi, yaitu Belanda dan Prancis, serta komunitas berbahasa Jerman. 
-      Budaya Belgia juga terkenal dengan seni, musik, dan festival yang meriah.</p>
-      <img src="../gambar/budayabelgia.jpg" alt="budaya" />
-  </section>
+<section id="budaya" class="section-content">
+  <h2>Budaya</h2>
+  <?php
+    include '../config/connection.php';
+
+    $query = mysqli_query($connection, "SELECT * FROM tb_budaya");
+    while ($data = mysqli_fetch_assoc($query)) {
+      echo "<h3>" . htmlspecialchars($data['budaya']) . "</h3>";
+      echo "<img src='../gambar/" . htmlspecialchars($data['gambar']) . "' width='300' alt='budaya'><br><br>";
+    }
+  ?>
+  <a href="budaya_tampil.php">Tambah Budaya</a>
+</section>
+
 
   <section id="negara" class="section-content">
     <h2>Negara</h2>
+    <p>Belgia</p>
     <p>Belgia adalah negara yang terletak di Eropa Barat. Negara ini dikenal dengan budaya yang kaya, arsitektur yang indah, dan makanan yang lezat. 
       Belgia terkenal dengan cokelatnya yang berkualitas tinggi, bir yang bervariasi, dan wafel yang terkenal di seluruh dunia.</p>
       <img src="../gambar/belgia.jpeg" alt="belgia" />
   </section>
 
-   <section id="makanan" class="section-content">
-     <h2>Makanan</h2>
-      <p>Beberapa makanan khas Belgia yang terkenal antara lain:</p>
-      <p>Frites (Kentang Goreng)</p>
-    <div class="image">
-      <img src="../gambar/kentang.jpeg" alt="kentang" />
-    </div>
-  </section>
+    <section id="makanan" class="section-content">
+  <h2>makanan</h2>
+  <?php
+    include '../config/connection.php';
 
-  <section id="minuman" class="section-content">
-    <h2>Minuman</h2>
-    <p>Belgia juga terkenal dengan birnya yang berkualitas tinggi. Ada banyak jenis bir Belgia, termasuk Trappist, Abbey, dan Witbier. Bir Belgia sering disajikan dalam gelas khusus yang dirancang untuk meningkatkan rasa dan aroma bir.</p>
-    <div class="image">
-      <img src="../gambar/bir.jpeg" alt="coklat" />
-    </div>
-  </section>
+    $query = mysqli_query($connection, "SELECT * FROM tb_makanan");
+    while ($data = mysqli_fetch_assoc($query)) {
+      echo "<h3>" . htmlspecialchars($data['deskripsi_makanan']) . "</h3>";
+      echo "<img src='../gambar/" . htmlspecialchars($data['gambar_makanan']) . "' width='300' alt='Makanan'><br><br>";
+    }
+  ?>
+  <a href="makanan_tampil.php">Tambah Makanan</a>
+</section>
+
+<section id="minuman" class="section-content">
+  <h2>Budaya</h2>
+  <?php
+    include '../config/connection.php';
+
+    $query = mysqli_query($connection, "SELECT * FROM tb_minuman");
+    while ($data = mysqli_fetch_assoc($query)) {
+      echo "<h3>" . htmlspecialchars($data['deskripsi_minuman']) . "</h3>";
+      echo "<img src='../gambar/" . htmlspecialchars($data['gambar_minuman']) . "' width='300' alt='Minuman'><br><br>";
+    }
+  ?>
+  <a href="minuman_tampil.php">Tambah Budaya</a>
+</section>
 
   <section id="baju" class="section-content">
     <h2>Baju</h2>
