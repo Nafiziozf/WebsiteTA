@@ -69,4 +69,4 @@
         break;
     }
 ?>
-<meta http-equiv="refresh" content="0;URL=admin.php?page=budaya_tampil">
+<meta http-equiv="refresh" content="0;URL=index.php?page=budaya_tampil.php">

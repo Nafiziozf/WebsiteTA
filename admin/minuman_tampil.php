@@ -1,7 +1,7 @@
     <h2 align = "center" >DATA MINUMAN</h2>
 
     <?php
-        echo"<a href = 'admin.php?page=minuman_input'><input type = 'submit' name='input' value = 'TAMBAH MINUMAN'></a>";
+        echo"<a href = 'minuman_input.php'><input type = 'submit' name='input' value = 'TAMBAH MINUMAN'></a>";
     ?>
     <br> </br>
     <table border="1" align="center" width="95%">
