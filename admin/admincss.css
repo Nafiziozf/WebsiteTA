@@ -1,0 +1,87 @@
+body {
+    background-color: #292929;
+}
+
+#header {
+    width: 98%;
+    height: 50px;
+    background-color: #474747;
+    border: 3px solid #000000;
+    text-align: center;
+    font-size: 30px;
+    padding: 10px 10px 10px 10px;
+}
+
+#kiri {
+    width: 15%;
+    height: 1100px;
+    background-color: #474747;
+    border: 3px solid #000000;
+    float: left;
+
+    .container-menu{
+        display: flex;
+        flex-direction: column;
+    }
+
+    .admin-menu{
+        padding-left: 30px;
+        padding-bottom: 8px;
+        padding-top: 8px;
+        color: rgb(0, 0, 0);
+        font-size: larger;
+        border-radius: 15px;
+        transition: color 0.5s;
+        transition: background-color 0.5s, color 0.5s;
+    }
+    .admin-menu:hover{
+        background-color: #050505;
+        border-radius: 15px;
+        color: white;
+        transition: color 0.5s;
+        transition: background-color 0.5s, color 0.5s;
+    }
+}
+
+#kanan {
+    width: 84%;
+    height: 1100px;
+    background-color: #ffffff;
+    border: 3px solid #000000;
+    float: right;
+}
+
+.logout-button input[type="button"] {
+    background-color: #131313;
+    color: white;
+    border: none;
+    padding: 10px 20px;
+    border-radius: 25px;
+    cursor: pointer;
+    font-size: 16px;
+    box-shadow: 0 4px 6px rgba(0, 0, 0, 0.2);
+    transition: background-color 0.3s, transform 0.2s;
+    
+}
+
+.logout-button input[type="button"]:hover {
+    background-color: #000000;
+    transform: scale(1.05);
+}
+
+.logout-button input[type="button"]:active {
+    background-color: #000000;
+    transform: scale(0.95);
+}
+
+
+#footer {
+    width: 98%;
+    height: 20px;
+    background-color: #474747;
+    border: 3px solid #000000;
+    text-align: center;
+    font-size: 15px;
+    padding: 10px 10px 10px 10px;
+    clear: both;
+}
