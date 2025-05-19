@@ -70,4 +70,4 @@
         break;
     }
 ?>
-<meta http-equiv="refresh" content="0;URL=index.php?page=makanan_tampil.php">
+<meta http-equiv="refresh" content="0;URL=admin.php?page=makanan_tampil">
