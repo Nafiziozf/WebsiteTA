@@ -1,7 +1,7 @@
     <h2 align = "center" >DATA BUDAYA</h2>
 
     <?php
-        echo"<a href = 'admin.php?page=budaya_input'><input type = 'submit' name='input' value = 'TAMBAH BUDAYA'></a>";
+        echo"<a href = 'budaya_input.php'><input type = 'submit' name 'input' value = 'TAMBAH BUDAYA'></a>";
     ?>
     <br> </br>
     <table border="1" align="center" width="95%">
@@ -22,7 +22,7 @@
                 echo    "<td>$hasil[id_budaya]</td>";
                 echo    "<td>$hasil[budaya]</td>";
                 echo    "<td><img src = '$hasil[gambar]' width = 125 height = 100></td>";
-                echo    "<td align = 'center'><a href='admin.php?page=budaya_input&?status=edit&id_budaya=$hasil[id_budaya]'>EDIT</a></td>";
+                echo    "<td align = 'center'><a href='index.php?page=budaya_input&?status=edit&id_budaya=$hasil[id_budaya]'>EDIT</a></td>";
                 echo    "<td><a href='#' onclick=\"if(confirm('apakah anda yakin?')){window.location.href='budaya_proses.php?status=hapus&id_budaya=$hasil[id_budaya]';}\"> HAPUS</a></td>";
                 echo "</tr>";
 
