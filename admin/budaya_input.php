@@ -4,7 +4,7 @@
                 {
                     $id_budaya = $_REQUEST['id_budaya'];
                     $query = mysqli_query($connection, "SELECT * FROM tb_budaya WHERE id_budaya = '$id_budaya'") or die (mysqli_error($connection));
-                    $data = mysqli_fetch_array($query);
+                    $budaya_edit = mysqli_fetch_array($query);
                 }
 
             ?>

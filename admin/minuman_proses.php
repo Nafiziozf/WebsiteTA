@@ -70,4 +70,4 @@
         break;
     }
 ?>
-<meta http-equiv="refresh" content="0;URL=index.php?page=minuman_tampil.php">
+<meta http-equiv="refresh" content="0;URL=admin.php?page=minuman_tampil">

@@ -1,7 +1,7 @@
     <h2 align = "center" >DATA MAKANAN</h2>
 
     <?php
-        echo"<a href = 'makanan_input.php'><input type = 'submit' name 'input' value = 'TAMBAH MAKANAN'></a>";
+        echo"<a href = 'admin.php?page=makanan_input'><input type = 'submit' name 'input' value = 'TAMBAH MAKANAN'></a>";
     ?>
     <br> </br>
     <table border="1" align="center" width="95%">

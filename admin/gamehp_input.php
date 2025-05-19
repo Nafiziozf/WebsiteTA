@@ -1,18 +1,18 @@
             <?php
                 include "../config/connection.php";
-                if(isset($_REQUEST['id_makanan']))
+                if(isset($_REQUEST['id_gamehp']))
                 {
-                    $id_makanan = $_REQUEST['id_makanan'];
-                    $query = mysqli_query($connection, "SELECT * FROM tb_makanan WHERE id_makanan = '$id_makanan'") or die (mysqli_error($connection));
-                    $makanan_edit = mysqli_fetch_array($query);
+                    $id_gamehp = $_REQUEST['id_gamehp'];
+                    $query = mysqli_query($connection, "SELECT * FROM tb_gamehp WHERE id_gamehp = '$id_gamehp'") or die (mysqli_error($connection));
+                    $gamehp_edit = mysqli_fetch_array($query);
                 }
             ?>
 
-            <h2 align = "Center" > input makanan </h2>
+            <h2 align = "Center" > input gamehp </h2>
 
-            <form action = "makanan_proses.php" method = "POST" enctype = "multipart/form-data"> 
+            <form action = "gamehp_proses.php" method = "POST" enctype = "multipart/form-data"> 
                 <?php
-                    if(isset($_GET['id_makanan']))
+                    if(isset($_GET['id_gamehp']))
                     {
                         echo "<input type ='hidden' name = 'status' value = 'edit'>";
                     }
@@ -23,21 +23,21 @@
                 ?>
                 <table>
                     <tr>
-                        <td>ID MAKANAN</td>
+                        <td>ID GAMEHP</td>
                         <td>:</td>
-                        <td><input type="text" name="id_makanan" maxlength="11" size="11" value="<?php echo @$makanan_edit['id_makanan']; ?>"></td>
+                        <td><input type="text" name="id_gamehp" maxlength="11" size="11" value="<?php echo @$gamehp_edit['id_gamehp']; ?>"></td>
                     </tr>
 
                     <tr>
-                        <td>MAKANAN</td>
+                        <td>GAMEHP</td>
                         <td>:</td>
-                        <td><input type="text" name="makanan" maxlength="20" size="20" value="<?php echo @$makanan_edit['makanan']; ?>"></td>
+                        <td><input type="text" name="gamehp" maxlength="20" size="20" value="<?php echo @$gamehp_edit['gamehp']; ?>"></td>
                     </tr>
                     
                     <tr>
-                        <td>DESKRIPSI MAKANAN</td>
+                        <td>DESKRIPSI GAMEHP</td>
                         <td>:</td>
-                        <td><input type="text" name="deskripsi_makanan" maxlength="500" size="500" value="<?php echo @$makanan_edit['deskripsi_makanan']; ?>"></td>
+                        <td><input type="text" name="deskripsi_gamehp" maxlength="500" size="500" value="<?php echo @$gamehp_edit['deskripsi_gamehp']; ?>"></td>
                     </tr>
                     
                     <tr>
@@ -45,15 +45,15 @@
                         <td>:</td>
                         <td>
                             <?php
-                            if(isset($_REQUEST['id_makanan']) && $makanan_edit)
+                            if(isset($_REQUEST['id_gamehp']) && $gamehp_edit)
                             {
-                                echo "<img src='{$makanan_edit['gambar_makanan']}' width=100 height=100>";
+                                echo "<img src='{$gamehp_edit['gambar_gamehp']}' width=100 height=100>";
                             }
                             ?>
                             </br>
                             <input type="file" name="gambar">
                             <?php 
-                                if(isset($_REQUEST['id_makanan']))
+                                if(isset($_REQUEST['id_gamehp']))
                                 {
                             ?>
                             </br>

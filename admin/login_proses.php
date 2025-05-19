@@ -13,7 +13,7 @@ if ($jumlah_login == 0) {
     $_SESSION['nama_admin'] = $data_login['nama_admin'];
     $_SESSION['username'] = $data_login['username'];
     $_SESSION['foto_admin'] = $data_login['foto_admin'];
-    echo "<script>alert('Login successfully'); window.location.href='index.php';</script>";
+    echo "<script>alert('Login successfully'); window.location.href='admin.php';</script>";
 }
 ?>
-<meta http-equiv="refresh" content="0;URL=index.php">
+<meta http-equiv="refresh" content="0;URL=admin.php">
