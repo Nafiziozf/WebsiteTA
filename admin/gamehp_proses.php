@@ -9,14 +9,15 @@
     {
         case 'tambah':
             $id_gamehp=$_REQUEST['id_gamehp'];
+            $deskripsi_gamehp=$_REQUEST['deskripsi_gamehp'];
             $gamehp=$_REQUEST['gamehp'];
             
-            $asal = $_FILES['gambar']['tmp_name'];
-            $simpan_gambar = "../gambar/".$_FILES['gambar']['name']; 
+            $asal = $_FILES['gambar_gamehp']['tmp_name'];
+            $simpan_gambar = "../gambar/".$_FILES['gambar_gamehp']['name']; 
             move_uploaded_file($asal, $simpan_gambar);
             
             $gamehp_input = mysqli_query($connection, "INSERT INTO 
-            tb_gamehp VALUES ('$id_gamehp', '$gamehp', '$simpan_gambar')");
+            tb_gamehp VALUES ('$id_gamehp', '$gamehp','$deskripsi_gamehp', '$simpan_gambar')");
             if ($gamehp_input == true)
             {
                 echo"<script>alert ('input in db')</script>";
@@ -33,12 +34,12 @@ case 'edit':
     $gamehp = $_REQUEST['gamehp'];
 
     
-    if (isset($_FILES['gambar']) && $_FILES['gambar']['error'] == 0) {
-        $asal = $_FILES['gambar']['tmp_name'];
-        $simpan_gambar = "../gambar/" . $_FILES['gambar']['name'];
+    if (isset($_FILES['gambar_gamehp']) && $_FILES['gambar_gamehp']['error'] == 0) {
+        $asal = $_FILES['gambar_gamehp']['tmp_name'];
+        $simpan_gambar = "../gambar/" . $_FILES['gambar_gamehp']['name'];
         move_uploaded_file($asal, $simpan_gambar);
         
-        $gamehp_edit = mysqli_query($connection, "UPDATE tb_gamehp SET id_gamehp = '$id_gamehp', gamehp = '$gamehp', deskripsi_gamehp = '$deskripsi_gamehp', gambar = '$simpan_gambar' WHERE id_gamehp = '$id_gamehp'");
+        $gamehp_edit = mysqli_query($connection, "UPDATE tb_gamehp SET id_gamehp = '$id_gamehp', gamehp = '$gamehp', deskripsi_gamehp = '$deskripsi_gamehp', gambar_gamehp = '$simpan_gambar' WHERE id_gamehp = '$id_gamehp'");
     } else {
         
         $gamehp_edit = mysqli_query($connection, "UPDATE tb_gamehp SET id_gamehp = '$id_gamehp', gamehp = '$gamehp' WHERE id_gamehp = '$id_gamehp'");

@@ -12,8 +12,8 @@
             $minuman=$_REQUEST['minuman'];
             $deskripsi_minuman=$_REQUEST['deskripsi_minuman'];
             
-            $asal = $_FILES['gambar']['tmp_name'];
-            $simpan_gambar = "../gambar/".$_FILES['gambar']['name']; 
+            $asal = $_FILES['gambar_minuman']['tmp_name'];
+            $simpan_gambar = "../gambar/".$_FILES['gambar_minuman']['name']; 
             move_uploaded_file($asal, $simpan_gambar);
             
             $minuman_input = mysqli_query($connection, "INSERT INTO 
@@ -29,29 +29,42 @@
             
         break;
 
-        case 'edit':
-            $id_minuman=$_REQUEST['id_minuman'];
-            $minuman=$_REQUEST['minuman'];
-            $deskripsi_minuman=$_REQUEST['deskripsi_minuman'];
-            
-            if ($centang == '1')
-            {
-                $asal = $_FILES['gambar']['tmp_name'];
-                $simpan_gambar = "../gambar/".$_FILES['gambar']['name']; 
-                move_uploaded_file($asal, $simpan_gambar);
-            }
- 
-            $minuman_edit = mysqli_query($connection, "UPDATE tb_minuman SET id_minuman = '$id_minuman', minuman = '$minuman', deskripsi_minuman = '$deskripsi_minuman', gambar = '$simpan_gambar' WHERE id_minuman = '$id_minuman'");
-            if ($minuman_edit == true)
-            {
-                echo"<script>alert ('update in db')</script>";
-            }
-            else
-            {
-                echo"<script>alert ('input in db failed')</script>";
-            }
-            
-        break;
+case 'edit':
+    $id_minuman = $_REQUEST['id_minuman'];
+    $minuman = $_REQUEST['minuman'];
+    $deskripsi_minuman = $_REQUEST['deskripsi_minuman'];
+    $simpan_gambar = "";
+
+    $centang = $_REQUEST['centang'] ?? '0';
+    $gambar_column_exists = false;
+    $result = mysqli_query($connection, "SHOW COLUMNS FROM tb_minuman LIKE 'gambar_minuman'");
+    if ($result && mysqli_num_rows($result) > 0) {
+        $gambar_column_exists = true;
+    }
+
+    if ($centang == '1' && isset($_FILES['gambar_minuman']) && $_FILES['gambar_minuman']['error'] == 0 && $gambar_column_exists)
+    {
+        $asal = $_FILES['gambar_minuman']['tmp_name'];
+        $simpan_gambar = "../gambar/" . $_FILES['gambar_minuman']['name'];
+        move_uploaded_file($asal, $simpan_gambar);
+
+        $minuman_edit = mysqli_query($connection, "UPDATE tb_minuman SET id_minuman = '$id_minuman', minuman = '$minuman', deskripsi_minuman = '$deskripsi_minuman', gambar_minuman = '$simpan_gambar' WHERE id_minuman = '$id_minuman'");
+    }
+    else
+    {
+        $minuman_edit = mysqli_query($connection, "UPDATE tb_minuman SET id_minuman = '$id_minuman', minuman = '$minuman', deskripsi_minuman = '$deskripsi_minuman' WHERE id_minuman = '$id_minuman'");
+    }
+
+    switch ($minuman_edit) {
+        case true:
+            echo "<script>alert ('update in db')</script>";
+            break;
+        default:
+            echo "<script>alert ('input in db failed')</script>";
+            break;
+    }
+
+    break;
 
         case 'hapus':
             $id_minuman = $_REQUEST['id_minuman'];

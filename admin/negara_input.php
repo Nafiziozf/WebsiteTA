@@ -37,9 +37,10 @@
                     <tr>
                         <td>DESKRIPSI NEGARA</td>
                         <td>:</td>
-                        <td><input type="text" name="deskripsi_negara" maxlength="500" size="500" value="<?php echo @$negara_edit['deskripsi_negara']; ?>"></td>
-                    </tr>
-                    
+                        <td>
+                            <textarea name="deskripsi_negara" maxlength="5000" rows="4" cols="60"><?php echo @$negara_edit['deskripsi_negara']; ?></textarea>
+                        </td>
+                    </tr>            
                     <tr>
                         <td>BENDERA</td>
                         <td>:</td>

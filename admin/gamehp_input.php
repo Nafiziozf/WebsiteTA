@@ -37,9 +37,10 @@
                     <tr>
                         <td>DESKRIPSI GAMEHP</td>
                         <td>:</td>
-                        <td><input type="text" name="deskripsi_gamehp" maxlength="500" size="500" value="<?php echo @$gamehp_edit['deskripsi_gamehp']; ?>"></td>
-                    </tr>
-                    
+                        <td>
+                            <textarea name="deskripsi_gamehp" maxlength="500" cols="60" rows="4"><?php echo @$gamehp_edit['deskripsi_gamehp']; ?></textarea>
+                        </td>
+                    </tr>            
                     <tr>
                         <td>GAMBAR</td>
                         <td>:</td>
@@ -51,7 +52,7 @@
                             }
                             ?>
                             </br>
-                            <input type="file" name="gambar">
+                            <input type="file" name="gambar_gamehp">
                             <?php 
                                 if(isset($_REQUEST['id_gamehp']))
                                 {

@@ -13,6 +13,7 @@
     <a class="admin-menu" href="admin.php?page=budaya_tampil">Budaya</a>
     <a class="admin-menu" href="admin.php?page=makanan_tampil">Makanan</a>
     <a class="admin-menu" href="admin.php?page=minuman_tampil">Minuman</a>
+    <a class="admin-menu" href="admin.php?page=cardgame_tampil">Card Game</a>
     <a class="admin-menu" href="admin.php?page=gamehp_tampil">Game HP</a>
     <a class="admin-menu" href="admin.php?page=gamepc_tampil">Game PC</a>
 </div>

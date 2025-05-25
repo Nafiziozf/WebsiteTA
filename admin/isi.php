@@ -63,6 +63,15 @@
         case 'gamehp_input':
             include "gamehp_input.php";
             break;
+        case 'cardgame_tampil':
+            include "cardgame_tampil.php";
+            break;
+        case 'cardgame_proses':
+            include "cardgame_proses.php";
+            break;
+        case 'cardgame_input':
+            include "cardgame_input.php";
+            break;
         }
     }
 ?>

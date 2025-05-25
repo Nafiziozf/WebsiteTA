@@ -1,18 +1,18 @@
             <?php
                 include "../config/connection.php";
-                if(isset($_REQUEST['id_gamepc']))
+                if(isset($_REQUEST['id_cardgame']))
                 {
-                    $id_gamepc = $_REQUEST['id_gamepc'];
-                    $query = mysqli_query($connection, "SELECT * FROM tb_gamepc WHERE id_gamepc = '$id_gamepc'") or die (mysqli_error($connection));
-                    $gamepc_edit = mysqli_fetch_array($query);
+                    $id_cardgame = $_REQUEST['id_cardgame'];
+                    $query = mysqli_query($connection, "SELECT * FROM tb_cardgame WHERE id_cardgame = '$id_cardgame'") or die (mysqli_error($connection));
+                    $cardgame_edit = mysqli_fetch_array($query);
                 }
             ?>
 
-            <h2 align = "Center" > input gamepc </h2>
+            <h2 align = "Center" > input cardgame </h2>
 
-            <form action = "gamepc_proses.php" method = "POST" enctype = "multipart/form-data"> 
+            <form action = "cardgame_proses.php" method = "POST" enctype = "multipart/form-data"> 
                 <?php
-                    if(isset($_GET['id_gamepc']))
+                    if(isset($_GET['id_cardgame']))
                     {
                         echo "<input type ='hidden' name = 'status' value = 'edit'>";
                     }
@@ -23,22 +23,22 @@
                 ?>
                 <table>
                     <tr>
-                        <td>ID GAMEPC</td>
+                        <td>ID CARDGAME</td>
                         <td>:</td>
-                        <td><input type="text" name="id_gamepc" maxlength="11" size="11" value="<?php echo @$gamepc_edit['id_gamepc']; ?>"></td>
+                        <td><input type="text" name="id_cardgame" maxlength="11" size="11" value="<?php echo @$cardgame_edit['id_cardgame']; ?>"></td>
                     </tr>
 
                     <tr>
-                        <td>GAMEPC</td>
+                        <td>CARDGAME</td>
                         <td>:</td>
-                        <td><input type="text" name="gamepc" maxlength="20" size="20" value="<?php echo @$gamepc_edit['gamepc']; ?>"></td>
+                        <td><input type="text" name="cardgame" maxlength="20" size="20" value="<?php echo @$cardgame_edit['cardgame']; ?>"></td>
                     </tr>
                     
                     <tr>
-                        <td>DESKRIPSI GAMEPC</td>
+                        <td>DESKRIPSI CARDGAME</td>
                         <td>:</td>
                         <td>
-                            <textarea name="deskripsi_gamepc" maxlength="500" cols="60" rows="5"><?php echo @$gamepc_edit['deskripsi_gamepc']; ?></textarea>
+                            <textarea name="deskripsi_cardgame" maxlength="500" cols="60" rows="4"><?php echo @$cardgame_edit['deskripsi_cardgame']; ?></textarea>
                         </td>
                     </tr>            
                     <tr>
@@ -46,15 +46,15 @@
                         <td>:</td>
                         <td>
                             <?php
-                            if(isset($_REQUEST['id_gamepc']) && $gamepc_edit)
+                            if(isset($_REQUEST['id_cardgame']) && $cardgame_edit)
                             {
-                                echo "<img src='{$gamepc_edit['gambar_gamepc']}' width=100 height=100>";
+                                echo "<img src='{$cardgame_edit['gambar_cardgame']}' width=100 height=100>";
                             }
                             ?>
                             </br>
-                            <input type="file" name="gambar_gamepc">
+                            <input type="file" name="gambar_cardgame">
                             <?php 
-                                if(isset($_REQUEST['id_gamepc']))
+                                if(isset($_REQUEST['id_cardgame']))
                                 {
                             ?>
                             </br>

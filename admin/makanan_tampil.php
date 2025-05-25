@@ -24,7 +24,7 @@
                 echo    "<td>$hasil[makanan]</td>";
                 echo    "<td>$hasil[deskripsi_makanan]</td>";
                 echo    "<td><img src = '$hasil[gambar_makanan]' width = 125 height = 100></td>";
-                echo    "<td align = 'center'><a href='?page=makanan_input&?status=edit&id_makanan=$hasil[id_makanan]'>EDIT</a></td>";
+                echo    "<td align = 'center'><a href='admin.php?page=makanan_input&?status=edit&id_makanan=$hasil[id_makanan]'>EDIT</a></td>";
                 echo    "<td><a href='#' onclick=\"if(confirm('apakah anda yakin?')){window.location.href='makanan_proses.php?status=hapus&id_makanan=$hasil[id_makanan]';}\"> HAPUS</a></td>";
                 echo "</tr>";
 

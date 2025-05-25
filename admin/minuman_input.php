@@ -31,16 +31,18 @@
                     <tr>
                         <td>MINUMAN</td>
                         <td>:</td>
-                        <td><input type="text" name="minuman" maxlength="20" size="20" value="<?php echo @$minuman_edit['minuman']; ?>"></td>
+                        <td><input type="text" name="minuman" maxlength="21" size="21" value="<?php echo @$minuman_edit['minuman']; ?>"></td>
                     </tr>
                     
-                    <tr>
-                        <td>DESKRIPSI MINUMAN</td>
-                        <td>:</td>
-                        <td><input type="text" name="deskripsi_minuman" maxlength="500" size="500" value="<?php echo @$minuman_edit['deskripsi_minuman']; ?>"></td>
-                    </tr>
-                    
-                    <tr>
+                     <tr>
+                         <td>DESKRIPSI MINUMAN</td>
+                         <td>:</td>
+                         <td>
+                          <textarea name="deskripsi_minuman" maxlength="500" cols="60" rows="4"><?php echo @$minuman_edit['deskripsi_minuman']; ?></textarea>
+                         </td>
+                     </tr>
+
+                     </td>
                         <td>GAMBAR</td>
                         <td>:</td>
                         <td>
@@ -51,7 +53,7 @@
                             }
                             ?>
                             </br>
-                            <input type="file" name="gambar">
+                            <input type="file" name="gambar_minuman">
                             <?php 
                                 if(isset($_REQUEST['id_minuman']))
                                 {

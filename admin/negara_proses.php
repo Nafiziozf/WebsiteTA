@@ -33,12 +33,9 @@ case 'edit':
     $id_negara = $_REQUEST['id_negara'];
     $negara = $_REQUEST['negara'];
     $deskripsi_negara = $_REQUEST['deskripsi_negara'];
-    $simpan_gambar = ""; // Initialize variable
+    $simpan_gambar = "";
 
-    // Get checkbox value if set (assuming checkbox name is 'centang')
     $centang = $_REQUEST['centang'] ?? '0';
-
-    // Check if 'gambar' column exists in tb_negara
     $gambar_column_exists = false;
     $result = mysqli_query($connection, "SHOW COLUMNS FROM tb_negara LIKE 'gambar'");
     if ($result && mysqli_num_rows($result) > 0) {
@@ -67,7 +64,7 @@ case 'edit':
             break;
     }
 
-break;
+    break;
 
         case 'hapus':
             $id_negara = $_REQUEST['id_negara'];

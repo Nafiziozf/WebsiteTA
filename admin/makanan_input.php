@@ -37,9 +37,10 @@
                     <tr>
                         <td>DESKRIPSI MAKANAN</td>
                         <td>:</td>
-                        <td><input type="text" name="deskripsi_makanan" maxlength="500" size="500" value="<?php echo @$makanan_edit['deskripsi_makanan']; ?>"></td>
-                    </tr>
-                    
+                        <td>
+                            <textarea name="deskripsi_makanan" maxlength="500" cols="50" rows="4"><?php echo @$makanan_edit['deskripsi_makanan']; ?></textarea>
+                        </td>
+                    </tr>            
                     <tr>
                         <td>GAMBAR</td>
                         <td>:</td>
@@ -51,7 +52,7 @@
                             }
                             ?>
                             </br>
-                            <input type="file" name="gambar">
+                            <input type="file" name="gambar_makanan">
                             <?php 
                                 if(isset($_REQUEST['id_makanan']))
                                 {

@@ -1,7 +1,7 @@
     <h2 align = "center" >DATA GAMEHP</h2>
 
     <?php
-        echo"<a href = 'gamehp_input.php'><input type = 'submit' name='input' value = 'TAMBAH GAMEHP'></a>";
+        echo"<a href = 'admin.php?page=gamehp_input'><input type = 'submit' name='input' value = 'TAMBAH GAMEHP'></a>";
     ?>
     <br> </br>
     <table border="1" align="center" width="95%">

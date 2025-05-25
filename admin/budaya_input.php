@@ -32,7 +32,7 @@
                             <tr>
                                 <td>BUDAYA</td>
                                 <td>:</td>
-                                <td><input type = "text" name = "budaya" maxlength = "500" size = "500"  value = "<?php echo @$budaya_edit['budaya']; ?>" ></td>
+                                <td><input type = "text" name = "budaya" maxlength = "20" size = "20"  value = "<?php echo @$budaya_edit['budaya']; ?>" ></td>
                             </tr>
 
                                 <td>GAMBAR</td>

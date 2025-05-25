@@ -1,4 +1,4 @@
-<div class="login-container">
+<div id="login-container">
   <form action="login_proses.php" method="post">
     
     <table>
