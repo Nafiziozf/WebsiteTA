@@ -38,7 +38,7 @@
                         <td>DESKRIPSI CARDGAME</td>
                         <td>:</td>
                         <td>
-                            <textarea name="deskripsi_cardgame" maxlength="500" cols="60" rows="4"><?php echo @$cardgame_edit['deskripsi_cardgame']; ?></textarea>
+                            <textarea name="deskripsi_cardgame" maxlength="750" cols="60" rows="4"><?php echo @$cardgame_edit['deskripsi_cardgame']; ?></textarea>
                         </td>
                     </tr>            
                     <tr>
